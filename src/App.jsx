@@ -8,11 +8,12 @@ import Beranda from './screens/beranda/index';
 import Promo from './screens/promo/index';
 import Riwayat from './screens/riwayat/index';
 import Kontak from './screens/kontak/index';
+import Splash from './screens/splash/index';
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
 
-const MainApp = () => {
+const MenuTab = () => {
   return (
     <Tabs.Navigator
       screenOptions={{
@@ -74,6 +75,23 @@ const MainApp = () => {
         }}
       />
     </Tabs.Navigator>
+  );
+};
+
+const MainApp = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Splash"
+        component={Splash}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="MenuTab"
+        component={MenuTab}
+        options={{headerShown: false}}
+      />
+    </Stack.Navigator>
   );
 };
 
