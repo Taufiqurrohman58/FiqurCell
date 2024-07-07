@@ -5,7 +5,7 @@ const Splash = ({navigation}) => {
 
     useEffect(() => {
         setTimeout(() => {
-            navigation.replace('MenuTab')
+            navigation.replace('Login')
         }, 3000)
     }, [navigation]);
 

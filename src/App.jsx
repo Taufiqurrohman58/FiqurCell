@@ -9,6 +9,7 @@ import Promo from './screens/promo/index';
 import Riwayat from './screens/riwayat/index';
 import Kontak from './screens/kontak/index';
 import Splash from './screens/splash/index';
+import Login from './screens/Login/index';
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -89,6 +90,11 @@ const MainApp = () => {
       <Stack.Screen
         name="MenuTab"
         component={MenuTab}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Login"
+        component={Login}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
