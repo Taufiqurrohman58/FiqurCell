@@ -92,14 +92,17 @@ const Index = () => {
               />
               <Text style={styles.serviceText}>XL</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.serviceItem}>
+            <TouchableOpacity
+              style={styles.serviceItem}
+              onPress={() => navigation.navigate('Telkomsel')}>
               <Image
                 source={require('../../assets/telkomsel.png')}
                 style={styles.serviceIcon}
               />
               <Text style={styles.serviceText}>Telkomsel</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.serviceItem}>
+            <TouchableOpacity style={styles.serviceItem}
+            onPress={() => navigation.navigate('Telkomsel')}>
               <Image
                 source={require('../../assets/indosat.png')}
                 style={styles.serviceIcon}

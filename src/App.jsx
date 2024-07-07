@@ -8,8 +8,11 @@ import Beranda from './screens/beranda/index';
 import Promo from './screens/promo/index';
 import Riwayat from './screens/riwayat/index';
 import Kontak from './screens/kontak/index';
-import Splash from './screens/splash/index';
 import Login from './screens/Login/index';
+import Splash from './screens/splash/index';
+import XLDetail from './screens/beranda/xl';
+import Tri from './screens/beranda/Tri';
+import Telkomsel from './screens/beranda/Telkomsel';
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -88,13 +91,20 @@ const MainApp = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="MenuTab"
-        component={MenuTab}
+        name="Login"
+        component={Login}
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="Login"
-        component={Login}
+        name="XLDetail"
+        component={XLDetail}
+        options={{title: 'XL'}}
+      />
+      <Stack.Screen name="Tri" component={Tri} options={{title: 'Tri'}} />
+      <Stack.Screen name="Telkomsel" component={Telkomsel} options={{title: 'Telkomsel'}} />
+      <Stack.Screen
+        name="MenuTab"
+        component={MenuTab}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
