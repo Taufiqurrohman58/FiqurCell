@@ -1,14 +1,26 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from 'react';
+import {View, Text, StyleSheet} from 'react-native';
 
-const index = () => {
+const HistoryScreen = () => {
   return (
-    <View>
-      <Text>index</Text>
+    <View style={styles.container}>
+      <Text style={styles.noHistoryText}>Tidak Ada Riwayat Tersedia</Text>
     </View>
-  )
-}
+  );
+};
 
-export default index
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#f0f0f0',
+  },
+  noHistoryText: {
+    fontSize: 16,
+    fontStyle: 'italic',
+    color: 'black',
+  },
+});
 
-const styles = StyleSheet.create({})
+export default HistoryScreen;
